@@ -1,6 +1,6 @@
 tasks = []
 
-
+#I can add urgency and importance levels here
 def addTask():
     task= input("Please enter a task: ")
     priority = input("Please enter a priority (1 for high, 2 for medium, 3 for low): ")
@@ -64,7 +64,7 @@ def sortTasks():
             print("Invalid choice.")
     except:
         print("Invalid input.")
-
+#This can be a good addition. Notating the amount of tasks the user wants to complete.
 
 def markTaskCompleted():
     listTasks()
