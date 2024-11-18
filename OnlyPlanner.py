@@ -12,20 +12,18 @@ def addTask():
         "completed": False
     })
     print(f"Task '{task}' added with urgency '{urgency}' and importance '{importance}'.")
-
+#List all tasks to be organized
 
 def listTasks():
     if not tasks:
         print("There are no tasks currently.")  
         
-        taskToDelete = int(input("Enter the number to delete: "))
-        if taskToDelete >=0 and taskToDelete < len(tasks):
-            tasks.pop(taskToDelete)
-            print(f"Task {taskToDelete} has been removed.")
-        else: 
-            print(f"Task #{taskToDelete} was not found")
-    except:
-        print("Invalid input.")
+        else:
+        print("Current tasks:")    
+        for index, task in enumerate(tasks):
+            status = "Completed" if task["completed"] else "Pending"
+            print(f"Task #{index}. {task['task']} (Urgent: {task['urgency']}, Important: {task['importance']}, "
+                  f"Category: {task['category']}, Status: {status})")
 
 
 def listTasks():
