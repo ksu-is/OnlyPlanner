@@ -12,16 +12,16 @@ def addTask():
         "completed": False
     })
     print(f"Task '{task}' added with urgency '{urgency}' and importance '{importance}'.")
-#List all tasks to be organized
+#List all options for task organization
 
-def listTasks():
-   
-        print("Current tasks:")    
-        for index, task in enumerate(tasks):
-            status = "Completed" if task["completed"] else "Pending"
-            print(f"Task #{index}. {task['task']} (Urgent: {task['urgency']}, Important: {task['importance']}, "
-                  f"Category: {task['category']}, Status: {status})")
-
+  print("\nEisenhower Matrix:")
+    categories = {
+        "Urgent & Important": [],
+        "Not Urgent but Important": [],
+        "Urgent but Not Important": [],
+        "Not Urgent & Not Important": []
+    }
+            
 
 def listTasks():
     if not tasks:
