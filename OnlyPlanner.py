@@ -14,9 +14,10 @@ def addTask():
     print(f"Task '{task}' added with urgency '{urgency}' and importance '{importance}'.")
 
 
-def deleteTask():
-    listTasks()
-    try:
+def listTasks():
+    if not tasks:
+        print("There are no tasks currently.")  
+        
         taskToDelete = int(input("Enter the number to delete: "))
         if taskToDelete >=0 and taskToDelete < len(tasks):
             tasks.pop(taskToDelete)
