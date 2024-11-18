@@ -1,10 +1,17 @@
-#I can add urgency and importance levels here
+#I added urgency and importance levels here
 def addTask():
-    task= input("Please enter a task: ")
-    priority = input("Please enter a priority (1 for high, 2 for medium, 3 for low): ")
+    task = input("Please enter a task: ")
+    urgency = input("Is this task urgent? (yes/no): ").lower()
+    importance = input("Is this task important? (yes/no): ").lower()
     category = input("Please enter a category or label for the task: ")
-    tasks.append({"task": task, "priority": priority, "category": category, "completed": False})
-    print(f"Task '{task}' with priority {priority} and category '{category}' added to the list.")
+    tasks.append({
+        "task": task,
+        "urgency": urgency == "yes",
+        "importance": importance == "yes",
+        "category": category,
+        "completed": False
+    })
+    print(f"Task '{task}' added with urgency '{urgency}' and importance '{importance}'.")
 
 
 def deleteTask():
