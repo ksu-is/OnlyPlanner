@@ -1,4 +1,5 @@
-#I added urgency and importance levels here
+#Start with a general task list then I added urgency and importance levels for my categories
+tasks = []
 def addTask():
     task = input("Please enter a task: ")
     urgency = input("Is this task urgent? (yes/no): ").lower()
