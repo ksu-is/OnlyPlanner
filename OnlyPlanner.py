@@ -15,10 +15,7 @@ def addTask():
 #List all tasks to be organized
 
 def listTasks():
-    if not tasks:
-        print("There are no tasks currently.")  
-        
-        else:
+   
         print("Current tasks:")    
         for index, task in enumerate(tasks):
             status = "Completed" if task["completed"] else "Pending"
